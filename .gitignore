@@ -62,4 +62,5 @@ Thumbs.db
 !core/**/*.gz
 
 # Contrib Modules #
-modules/contrib
+#modules/contrib
+
