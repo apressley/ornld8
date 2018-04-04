@@ -9,7 +9,8 @@ test:
 
 build:
   stage: build
-  script: echo "Building the site"
+  script: echo "Running composer updates"
+    - php composer.phar update
 
 deploy_staging:
   stage: deploy
