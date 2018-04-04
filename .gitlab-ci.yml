@@ -9,7 +9,9 @@ test:
 
 build:
   stage: build
-  script: echo "Building the site"
+  before_script:
+    - terminus composer wwwornl.dev -- update
+  script: echo "Running composer updates"
 
 deploy_staging:
   stage: deploy
