@@ -9,10 +9,8 @@ test:
 
 build:
   stage: build
-  before_script:
-    - terminus auth:login email=sattleram@ornl.gov
-    - terminus composer wwwornl.dev -- update
   script: echo "Running composer updates"
+    - php composer.phar update
 
 deploy_staging:
   stage: deploy
