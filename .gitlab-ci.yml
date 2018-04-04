@@ -1,32 +1,33 @@
-stages:
-  - test
-  - build
-  - deploy
 
-test:
-  stage: test
-  script: echo "Running tests"
+dependencies:
+  cache_directories:
+    - ~/.composer/cache
+  pre:
+    - echo "Begin build"
+  override:
+    - /usr/bin/env COMPOSER_BIN_DIR=$HOME/bin composer --working-dir=$HOME require "pantheon-systems/terminus:^1"
+    - terminus --version
+    - mkdir -p ~/.terminus/plugins
+    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
+    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
+  post:
+    - terminus auth:login email=sattleram@ornl.gov
+    - composer -n build-assets
+    - terminus env:wake -n "wwwornl.dev"
+    - terminus build:env:create -n "wwwornl.dev" "dev" --yes --clone-content --db-only --notify="$NOTIFY"
+    - terminus drush -n "wwwornl.dev" -- updatedb -y
+    - |
+      [ ! -f "config/system.site.yml" ] || terminus drush "wwwornl.dev" -- config-import --yes
+      # Optional: replace lines above with lines below to re-install Drupal for every test.
+      # - terminus build:env:create -n "wwwornl.dev" "dev" --yes 
+      # - terminus build:env:install -n "wwwornl.dev" --site-name="$TEST_SITE_NAME" --account-mail="$ADMIN_EMAIL" --account-pass="$ADMIN_PASSWORD"
 
-build:
-  stage: build
-  before_script:
-#    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-#    - php composer-setup.php
-#    - php -r "unlink('composer-setup.php');"
-#    - php composer.phar install
-  script: 
-    - echo "Running composer updates"
-    - composer install
-    - composer update
-#    - drush config-import
-
-deploy_staging:
-  stage: deploy
-  script:
-    - echo "Deploy to dev server"
-  environment:
-    name: dev
-    url: http://dev-wwwornl.pantheonsite.io/
-  only:
-  - master
-
+deployment:
+  build-assets:
+    branch: master
+    commands:
+      - terminus build:env:merge -n "wwwornl.dev" --yes
+      - terminus drush -n wwwornl.dev -- updatedb --yes
+      - |
+        [ ! -f "config/system.site.yml" ] || terminus drush "wwwornl.dev" -- config-import --yes
+- terminus build:env:delete:pr -n "wwwornl" --yes
