@@ -16,7 +16,7 @@ build:
     - php composer.phar install
   script: 
     - echo "Running composer updates"
-    - drush config-import
+#    - drush config-import
 
 deploy_staging:
   stage: deploy
