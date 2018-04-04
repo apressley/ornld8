@@ -10,12 +10,14 @@ test:
 build:
   stage: build
   before_script:
-    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    - php composer-setup.php
-    - php -r "unlink('composer-setup.php');"
-    - php composer.phar install
+#    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+#    - php composer-setup.php
+#    - php -r "unlink('composer-setup.php');"
+#    - php composer.phar install
   script: 
     - echo "Running composer updates"
+    - composer install
+    - composer update
 #    - drush config-import
 
 deploy_staging:
