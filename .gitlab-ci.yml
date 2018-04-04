@@ -14,7 +14,8 @@ build:
     - php composer-setup.php
     - php -r "unlink('composer-setup.php');"
     - php composer.phar install
-  script: echo "Running composer updates"
+  script: 
+    - echo "Running composer updates"
     - drush config-import
 
 deploy_staging:
