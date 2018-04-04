@@ -1,0 +1,23 @@
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script: echo "Running tests"
+
+build:
+  stage: build
+  script: echo "Building the site"
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to dev server"
+  environment:
+    name: dev
+    url: http://dev-wwwornl.pantheonsite.io/
+  only:
+  - master
+
