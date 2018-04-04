@@ -1,0 +1,21 @@
+uuid: b1087795-c409-4da6-847b-db69fa25a867
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_profile_title
+    - node.type.staff_profile
+  module:
+    - options
+id: node.staff_profile.field_staff_profile_title
+field_name: field_staff_profile_title
+entity_type: node
+bundle: staff_profile
+label: 'Personal Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

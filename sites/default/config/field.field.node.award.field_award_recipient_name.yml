@@ -1,0 +1,19 @@
+uuid: 43b57bc1-d012-4eae-87d8-85df00441732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_recipient_name
+    - node.type.award
+id: node.award.field_award_recipient_name
+field_name: field_award_recipient_name
+entity_type: node
+bundle: award
+label: 'Award Recipient Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

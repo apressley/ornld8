@@ -1,0 +1,19 @@
+uuid: 2b5e6288-9d57-47e5-a4ff-be89af920738
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_publication_url
+field_name: field_publication_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: 1060ae12-662e-40d8-b082-80df50abe72e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_news_type
+field_name: field_news_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Announcement
+      label: Announcement
+    -
+      value: Blog
+      label: Blog
+    -
+      value: News
+      label: News
+    -
+      value: OrganizationNews
+      label: 'Organization News'
+    -
+      value: ResearchHighlight
+      label: 'Research Highlight'
+    -
+      value: SuccessStory
+      label: 'Success Story'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

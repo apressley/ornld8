@@ -1,0 +1,174 @@
+uuid: 42ee37e6-89ed-493d-989d-0ae1a49a694f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_profile.body
+    - field.field.node.staff_profile.field_staff_profile_badge_id
+    - field.field.node.staff_profile.field_staff_profile_cv
+    - field.field.node.staff_profile.field_staff_profile_email
+    - field.field.node.staff_profile.field_staff_profile_first_name
+    - field.field.node.staff_profile.field_staff_profile_job_title
+    - field.field.node.staff_profile.field_staff_profile_last_name
+    - field.field.node.staff_profile.field_staff_profile_middle
+    - field.field.node.staff_profile.field_staff_profile_orcid
+    - field.field.node.staff_profile.field_staff_profile_phone
+    - field.field.node.staff_profile.field_staff_profile_photo
+    - field.field.node.staff_profile.field_staff_profile_title
+    - image.style.thumbnail
+    - node.type.staff_profile
+  module:
+    - file
+    - image
+    - path
+    - text
+id: node.staff_profile.default
+targetEntityType: node
+bundle: staff_profile
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_staff_profile_badge_id:
+    weight: 132
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_cv:
+    weight: 131
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_staff_profile_email:
+    weight: 126
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_staff_profile_first_name:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_job_title:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_last_name:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_middle:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_orcid:
+    weight: 128
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_phone:
+    weight: 127
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_profile_photo:
+    weight: 130
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_staff_profile_title:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

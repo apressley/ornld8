@@ -1,0 +1,17 @@
+uuid: f5475cf8-b5a2-479f-9b16-76af071fe3ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Award
+type: award
+description: 'This content type is for Awards and Organizational Awards'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

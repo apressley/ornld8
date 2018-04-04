@@ -1,0 +1,17 @@
+uuid: eea4d073-8951-4149-846c-60ff43fc7aea
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: News
+type: news
+description: 'This content type is used in place of: Announcement, Blog, News, Organization News, Research Highlight, Success Story'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

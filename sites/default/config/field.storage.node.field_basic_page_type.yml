@@ -1,0 +1,57 @@
+uuid: 1a725d67-08da-454a-9150-d40a99c92d23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_basic_page_type
+field_name: field_basic_page_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Academia
+      label: Academia
+    -
+      value: BasicPage
+      label: 'Basic Page'
+    -
+      value: Capability
+      label: Capability
+    -
+      value: 'DirectorateBasic Page'
+      label: 'Directorate Basic Page'
+    -
+      value: 'DivisionBasic Page'
+      label: 'Division Basic Page'
+    -
+      value: FacilityOutput
+      label: 'Facility Output'
+    -
+      value: FacilitySubpage
+      label: 'Facility Subpage'
+    -
+      value: GeneralPage
+      label: 'General Page'
+    -
+      value: Partnerships
+      label: Partnerships
+    -
+      value: Project
+      label: Project
+    -
+      value: ScienceAreaBasicPage
+      label: 'Science Area Basic Page'
+    -
+      value: UserFacility
+      label: 'User Facility'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

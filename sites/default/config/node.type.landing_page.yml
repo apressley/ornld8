@@ -1,0 +1,18 @@
+uuid: d1d2a95f-2e5f-4432-a8fe-eca567ec920f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Landing Page'
+type: landing_page
+description: 'This content type is the replacement for: Directorate Landing Page, Division Landing Page, Facility Landing, Research Area, Science Area'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

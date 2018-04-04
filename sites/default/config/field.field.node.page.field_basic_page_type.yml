@@ -1,0 +1,21 @@
+uuid: 7cb4b390-e01e-438c-946c-e7c77a8be45b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_page_type
+    - node.type.page
+  module:
+    - options
+id: node.page.field_basic_page_type
+field_name: field_basic_page_type
+entity_type: node
+bundle: page
+label: 'Basic Page Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 63a876d2-9dbc-4c15-b276-843c74b1aad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_doi
+    - node.type.publication
+id: node.publication.field_publication_doi
+field_name: field_publication_doi
+entity_type: node
+bundle: publication
+label: DOI
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

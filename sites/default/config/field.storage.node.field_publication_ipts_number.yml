@@ -1,0 +1,20 @@
+uuid: 35b43451-c373-4684-a26d-095cd2daefd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_publication_ipts_number
+field_name: field_publication_ipts_number
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

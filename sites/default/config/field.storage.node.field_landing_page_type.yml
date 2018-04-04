@@ -1,0 +1,36 @@
+uuid: f92db66c-b104-40c8-ab27-ae69e17ab56a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_landing_page_type
+field_name: field_landing_page_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: DirectorateLandingPage
+      label: 'Directorate Landing Page'
+    -
+      value: DivisionLandingPage
+      label: 'Division Landing Page'
+    -
+      value: FacilityLanding
+      label: 'Facility Landing'
+    -
+      value: ResearchArea
+      label: 'Research Area'
+    -
+      value: ScienceArea
+      label: 'Science Area'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

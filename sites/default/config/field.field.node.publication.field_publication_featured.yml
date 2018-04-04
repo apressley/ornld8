@@ -1,0 +1,23 @@
+uuid: 69b05a9a-3ac3-42f6-85fe-b15f29e2db5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_featured
+    - node.type.publication
+id: node.publication.field_publication_featured
+field_name: field_publication_featured
+entity_type: node
+bundle: publication
+label: Featured
+description: 'Should this item be featured?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

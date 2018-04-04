@@ -1,0 +1,39 @@
+uuid: af82b333-0e6b-4e11-bcec-5ab1eee3d153
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_news_category
+field_name: field_news_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: AudioSpots
+      label: 'Audio Spots'
+    -
+      value: Features
+      label: Features
+    -
+      value: HonorsandAwards
+      label: 'Honors and Awards'
+    -
+      value: Profiles
+      label: Profiles
+    -
+      value: NewsReleases
+      label: 'News Releases'
+    -
+      value: StoryTips
+      label: 'Story Tips'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

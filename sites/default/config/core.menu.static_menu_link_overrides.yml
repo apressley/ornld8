@@ -1,0 +1,51 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  node__add__article:
+    enabled: false
+    menu_name: admin
+    parent: admin_toolbar_tools.add_content
+    expanded: false
+    weight: 0
+  entity__node_type__edit_form__article:
+    enabled: false
+    menu_name: admin
+    parent: entity.node_type.collection
+    weight: 0
+    expanded: false
+  entity__node__field_ui_fieldsarticle:
+    enabled: false
+    menu_name: admin
+    parent: entity.node_type.edit_form.article
+    expanded: false
+    weight: 1
+  entity__entity_form_display__node__defaultarticle:
+    enabled: false
+    menu_name: admin
+    parent: entity.node_type.edit_form.article
+    weight: 2
+    expanded: false
+  entity__entity_view_display__node__default__article:
+    enabled: false
+    menu_name: admin
+    parent: entity.node_type.edit_form.article
+    weight: 3
+    expanded: false
+  entity__node_type__devel_load__article:
+    enabled: false
+    menu_name: admin
+    parent: entity.node_type.edit_form.article
+    weight: 4
+    expanded: false
+  entity__node_type__delete_form__article:
+    enabled: false
+    menu_name: admin
+    parent: entity.node_type.edit_form.article
+    weight: 5
+    expanded: false
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

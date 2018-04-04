@@ -9,8 +9,12 @@ test:
 
 build:
   stage: build
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
   script: echo "Running composer updates"
     - php composer.phar update
+    - drush config-import
 
 deploy_staging:
   stage: deploy

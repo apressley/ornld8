@@ -1,0 +1,20 @@
+uuid: 638e82af-6416-4699-86a9-cdbc0d91db22
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Basic page'
+type: page
+description: 'This content type is used for the following old content types: Academia, Basic page, Capability, Directorate Basic Page, Division Basic Page, Facility Output, Facility Subpage, General Page, Partnerships, Project, Science Area Basic Page, User Facility'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

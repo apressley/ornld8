@@ -1,0 +1,19 @@
+uuid: 97c6f28a-9540-41ea-8f73-d67cd896c7d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_profile_orcid
+    - node.type.staff_profile
+id: node.staff_profile.field_staff_profile_orcid
+field_name: field_staff_profile_orcid
+entity_type: node
+bundle: staff_profile
+label: ORCID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

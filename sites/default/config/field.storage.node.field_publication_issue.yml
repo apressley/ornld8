@@ -1,0 +1,21 @@
+uuid: 90baf9fd-6050-4d0c-9f91-e4e30b147c99
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_publication_issue
+field_name: field_publication_issue
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

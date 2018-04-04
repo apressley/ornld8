@@ -1,0 +1,27 @@
+uuid: cde6f1ce-04c5-468b-b560-9dcb706390f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_profile_cv
+    - node.type.staff_profile
+  module:
+    - file
+id: node.staff_profile.field_staff_profile_cv
+field_name: field_staff_profile_cv
+entity_type: node
+bundle: staff_profile
+label: 'Curriculum Vitae'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png jpeg rtf doc docx gif xml xls xlsx ppt pptx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,21 @@
+uuid: ff36d29e-6105-4c21-ba85-8a4769dc2852
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_date
+    - node.type.award
+  module:
+    - datetime
+id: node.award.field_award_date
+field_name: field_award_date
+entity_type: node
+bundle: award
+label: 'Award Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

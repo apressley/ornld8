@@ -1,0 +1,17 @@
+uuid: 71108d99-94be-4546-a4bf-92d1a7bd178c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'This content type is for Events and Presentations'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

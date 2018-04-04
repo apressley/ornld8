@@ -1,0 +1,18 @@
+uuid: a9129c62-d188-4068-ac13-10f1d8af8d35
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_staff_profile_email
+field_name: field_staff_profile_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 39582ff4-46bd-40e4-adfd-0a6224005a42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_category
+    - node.type.award
+  module:
+    - options
+id: node.award.field_award_category
+field_name: field_award_category
+entity_type: node
+bundle: award
+label: 'Award Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
