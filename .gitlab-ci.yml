@@ -5,7 +5,8 @@ deploy_dev:
   stage: deploy
   script:
     - echo "Deploy to dev pantheon server"
-    - sudo sh /var/www/html/terminus.sh
+    - su ash
+    - sh /var/www/html/terminus.sh
 #    - terminus auth:login --email=sattleram@ornl.gov
 #    - terminus connection:set wwwornl.dev git
 #    - terminus upstream:updates:apply wwwornl
