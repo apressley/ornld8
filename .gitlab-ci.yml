@@ -7,8 +7,6 @@ build:
   script:
     - echo "Running composer updates"
     - /home/ash/vendor/bin/terminus auth:login -n --email=sattleram@ornl.gov
-    # The oldest multidev testing env is deleted
-    - /home/ash/vendor/bin/terminus multidev:delete wwwornl.mdev --yes
     # Build step
     - composer build-assets
     - /home/ash/vendor/bin/terminus env:wake wwwornl.dev
@@ -23,6 +21,8 @@ deploy_dev:
     # Build artifacts pushed up to dev environment
     - /home/ash/vendor/bin/terminus multidev:merge-to-dev wwwornl.mdev
     - /home/ash/vendor/bin/terminus drush wwwornl.dev -- config-import --yes
+    # The multidev testing env is deleted
+    - /home/ash/vendor/bin/terminus multidev:delete wwwornl.mdev --yes
   environment:
     name: dev
     url: http://dev-wwwornl.pantheonsite.io/
