@@ -1,40 +1,20 @@
 stages:
-  - test
-  - build
   - deploy
 
-test:
-  stage: test
-  script: echo "Running tests"
-
-build:
-  stage: build
-  before_script:
-    - /usr/bin/env COMPOSER_BIN_DIR=$HOME/bin composer --working-dir=$HOME require "pantheon-systems/terminus:^1"
-    - terminus --version
-    - mkdir -p ~/.terminus/plugins
-    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
-    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
-  script:
-    - echo "Running composer updates"
-    - terminus auth:login email=sattleram@ornl.gov
-    - composer -n build-assets
-    - terminus env:wake -n "wwwornl.dev"
-    - terminus build:env:create -n "wwwornl.dev" "dev" --yes --clone-content --db-only --notify="$NOTIFY"
-    - terminus drush -n "wwwornl.dev" -- updatedb -y
-    - |
-      [ ! -f "config/system.site.yml" ] || terminus drush "wwwornl.dev" -- config-import --yes
-      # Optional: replace lines above with lines below to re-install Drupal for every test.
-      # - terminus build:env:create -n "wwwornl.dev" "dev" --yes 
-      # - terminus build:env:install -n "wwwornl.dev" --site-name="$TEST_SITE_NAME" --account-mail="$ADMIN_EMAIL" --account-pass="$ADMIN_PASSWORD"
-
-deploy_staging:
+deploy_dev:
   stage: deploy
   script:
-    - echo "Deploy to dev server"
+    - echo "Deploy to dev pantheon server"
+    - terminus auth:login --sattleram@ornl.gov
+    - terminus connection:set wwwornl.dev git
+    - terminus upstream:updates:apply wwwornl
+    - terminus connection:set wwwornl.dev sftp
+    - terminus composer wwwornl.dev -- update
+    - terminus env:commit wwwornl.dev --message="GitLab Dev Repo Push"
+    - terminus drush config-import
+    - terminus connection:set wwwornl.dev git
   environment:
     name: dev
     url: http://dev-wwwornl.pantheonsite.io/
   only:
-  - master
-
+    - dev
