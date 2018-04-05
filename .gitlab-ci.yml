@@ -5,7 +5,7 @@ deploy_dev:
   stage: deploy
   script:
     - echo "Deploy to dev pantheon server"
-    - terminus auth:login --sattleram@ornl.gov
+    - terminus auth:login --email=sattleram@ornl.gov
     - terminus connection:set wwwornl.dev git
     - terminus upstream:updates:apply wwwornl
     - terminus connection:set wwwornl.dev sftp
