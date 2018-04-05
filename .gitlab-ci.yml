@@ -4,9 +4,6 @@ stages:
 
 build:
   stage: build
-  before_script:
-    - mkdir -p ~/.terminus/plugins
-    - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
   script:
     - echo "Running composer updates"
     - /home/ash/vendor/bin/terminus auth:login -n --email=sattleram@ornl.gov
