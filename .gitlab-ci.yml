@@ -5,14 +5,15 @@ deploy_dev:
   stage: deploy
   script:
     - echo "Deploy to dev pantheon server"
-    - terminus auth:login --email=sattleram@ornl.gov
-    - terminus connection:set wwwornl.dev git
-    - terminus upstream:updates:apply wwwornl
-    - terminus connection:set wwwornl.dev sftp
-    - terminus composer wwwornl.dev -- update
-    - terminus env:commit wwwornl.dev --message="GitLab Dev Repo Push"
-    - terminus drush config-import
-    - terminus connection:set wwwornl.dev git
+    - sh /home/ash/terminus.sh
+#    - terminus auth:login --email=sattleram@ornl.gov
+#    - terminus connection:set wwwornl.dev git
+#    - terminus upstream:updates:apply wwwornl
+#    - terminus connection:set wwwornl.dev sftp
+#    - terminus composer wwwornl.dev -- update
+#    - terminus env:commit wwwornl.dev --message="GitLab Dev Repo Push"
+#    - terminus drush config-import
+#    - terminus connection:set wwwornl.dev git
   environment:
     name: dev
     url: http://dev-wwwornl.pantheonsite.io/
